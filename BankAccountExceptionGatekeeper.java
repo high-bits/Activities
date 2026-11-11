@@ -51,11 +51,11 @@ class BankAccount {
 }
 
 
-public class Main {
+public class BankAccountExceptionGatekeeper {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        // Setting up initial mock account matching the expected output schema
+        
         BankAccount account = new BankAccount("ACC-1001", "Alex Cruz", 500.00);
         
         System.out.println("=== BANK ACCOUNT EXCEPTION GATEKEEPER ===");
@@ -63,7 +63,7 @@ public class Main {
                 account.getAccountNumber(), account.getAccountHolder(), account.getBalance());
 
         try {
-          
+            
             System.out.print("Enter withdrawal amount: ");
             double withdrawAmount = scanner.nextDouble();
             account.withdraw(withdrawAmount);
